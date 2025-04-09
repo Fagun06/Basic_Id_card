@@ -21,15 +21,19 @@ class IdCard extends StatelessWidget {
               
               decoration: BoxDecoration(
                 color: Colors.grey,
-                borderRadius: BorderRadius.circular(10)
+                borderRadius: BorderRadius.only(topRight: Radius.circular(20),bottomLeft: Radius.circular(20))
               ),
               child: Row(
                   children: [
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child:  Image.asset('assets/images/man.jpg'),
+                  Expanded(
+                    flex: 3,
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child:  Image.asset('assets/images/man.jpg'),
+                    ),
                   ),
                   Expanded(
+                    flex: 6,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -45,7 +49,8 @@ class IdCard extends StatelessWidget {
                     ),
                   ),
                     
-                  SizedBox(
+                  Expanded(
+                    flex: 3,
                     child: ElevatedButton(
                       onPressed:() {
                       
